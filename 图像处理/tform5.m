@@ -1,0 +1,13 @@
+clear;clc;
+A=imread('pout.tif');
+B=imrotate(A,30,'nearest');
+C=imrotate(A,30,'bilinear');
+D=imrotate(A,30,'bicubic');
+subplot(2,2,1),imshow(A);
+title('原图像');
+subplot(2,2,2),imshow(B);
+title('最邻近');
+subplot(2,2,3),imshow(C);
+title('双线性');
+subplot(2,2,4),imshow(D);
+title('三次');

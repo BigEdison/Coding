@@ -1,0 +1,12 @@
+clc;clear;
+I=imread('M.jpg');
+imshow(I);
+I=double(I);
+w1=fspecial('sobel');
+w2=w1';
+G1=imfilter(I,w1);
+G2=imfilter(I,w2);
+G=abs(G1)+abs(G2);
+figure,imshow(G,[]);
+figure,imshow(abs(G1),[]);
+figure,imshow(abs(G2),[]);
